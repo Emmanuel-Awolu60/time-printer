@@ -22,7 +22,7 @@ jobs:
                   docker build -t emmanuelao/complete-devops-project:${{ env.SHORT_SHA }} .
             - name: Login to Dockerhub 
               run: | 
-                   echo "${{ secrets.DOCKERHUB_TOKEN}}" | docker login -u " ${{secrets.DOCKERHUB_USERNAME}}" --password-
+                   echo "${{ secrets.DOCKERHUB_TOKEN}}" | docker login -u " ${{secrets.DOCKERHUB_USERNAME}}" --password-stdin
             - name: Push to Dockehub
               run: |
                docker push emmanuelao/complete-devops-project:${{ env.SHORT_SHA }} .
