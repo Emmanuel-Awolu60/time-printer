@@ -1,18 +1,18 @@
-apiVersion: argoproj.io/valphal
-kind: Application 
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  name: ./complete-devops-project
+  name: complete-devops-project
   namespace: argocd
-spec: 
+spec:
   project: default
-  source: 
-    repoURL : "https://github.com/Emmanuel-Awolu60/time-printer" 
+  source:
+    repoURL: https://github.com/Emmanuel-Awolu60/time-printer
     targetRevision: HEAD
     path: time-printer
   destination:
-    server: "https://kubernets.default.svc"
+    server: https://kubernetes.default.svc
     namespace: default
   syncPolicy:
     automated:
-    prune: true
+      prune: true
       selfHeal: true
