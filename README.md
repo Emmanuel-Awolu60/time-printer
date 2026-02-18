@@ -100,9 +100,3 @@ Git serves as the single source of truth.
 Completed.
 
 The repository contains the full implementation including CI workflows, Docker configuration, Terraform files, Helm charts, and ArgoCD configuration.
-
----
-
-## Repository
-
-Add the repository link here.
